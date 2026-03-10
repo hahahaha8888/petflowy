@@ -19,21 +19,28 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     
-    <!-- 语言和地区优化 -->
+    <!-- 规范链接 - 修正为GitHub Pages地址 -->
+    <link rel="canonical" href="https://hahahaha8888.github.io/petflowy/tom-cat-wet-food.html">
+    
+    <!-- 语言和地区优化 - 修正所有URL -->
     <meta property="og:locale" content="zh_MY">
     <meta property="og:type" content="product">
     <meta property="og:title" content="TOM Cat Wet Food | Makanan Kucing Basah Malaysia">
     <meta property="og:description" content="100% real meat wet food for cats. Fast delivery across Malaysia.">
-    <meta property="og:url" content="https://petflowy.com/products/tom-cat-wet-food">
+    <meta property="og:url" content="https://hahahaha8888.github.io/petflowy/tom-cat-wet-food.html">
+    <meta property="og:image" content="https://hahahaha8888.github.io/petflowy/assets/images/product-preview.png">
     <meta property="og:site_name" content="Petflowy">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="product">
+    <!-- Twitter Card - 修正为带图片的卡片 -->
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TOM Cat Wet Food Malaysia">
     <meta name="twitter:description" content="Premium makanan kucing basah with real meat">
+    <meta name="twitter:image" content="https://hahahaha8888.github.io/petflowy/assets/images/product-preview.png">
     
-    <!-- 规范链接（避免重复内容） -->
-    <link rel="canonical" href="https://petflowy.com/products/tom-cat-wet-food">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
     
     <!-- 结构化数据：产品 + 评论 + FAQ（这是排名的关键！） -->
     <script type="application/ld+json">
@@ -231,6 +238,39 @@
         .feature-card p {
             color: #6c757d;
         }
+        /* 产品图片区域 - 新增 */
+        .product-images {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .image-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .image-item:hover {
+            transform: translateY(-5px);
+        }
+        .image-item img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .image-item p {
+            margin-top: 15px;
+            font-weight: 600;
+            color: #495057;
+        }
         /* 产品口味区域 */
         .flavors {
             background: #f1f3f5;
@@ -250,6 +290,10 @@
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .flavor-emoji {
+            font-size: 4rem;
+            margin-bottom: 10px;
         }
         .flavor-item h4 {
             color: #f5576c;
@@ -308,7 +352,7 @@
             padding-left: 20px;
             border-left: 3px solid #4dabf7;
         }
-        /* CTA按钮 */
+        /* CTA按钮 - 修正 */
         .cta-button {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
@@ -341,6 +385,20 @@
         .keyword-highlight {
             font-weight: 600;
             color: #f5576c;
+        }
+        /* 临时图片占位 - 在没有真实图片时显示 */
+        .image-placeholder {
+            background: linear-gradient(135deg, #f093fb20 0%, #f5576c20 100%);
+            width: 100%;
+            max-width: 250px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            border: 2px dashed #f5576c;
         }
     </style>
 </head>
@@ -394,6 +452,47 @@
                 </div>
             </div>
             
+            <!-- 产品图片区域 - 新增！必须要有图片 -->
+            <div class="product-images">
+                <h2 style="color: #343a40; margin-bottom: 20px;">Our Products</h2>
+                <p style="color: #6c757d; margin-bottom: 30px;">Choose from 3 delicious flavors</p>
+                
+                <div class="image-grid">
+                    <div class="image-item">
+                        <!-- 真实图片路径 - 请上传文件到 assets/images/tom-chicken.jpg -->
+                        <img src="assets/images/tom-chicken.jpg" 
+                             alt="TOM Cat Wet Food Chicken flavor - Premium makanan kucing basah ayam untuk kucing Malaysia"
+                             onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🐔</div>
+                        <p>🐔 Tender Chicken</p>
+                        <small style="color: #868e96;">High protein, easy to digest</small>
+                    </div>
+                    
+                    <div class="image-item">
+                        <!-- 真实图片路径 - 请上传文件到 assets/images/tom-tuna.jpg -->
+                        <img src="assets/images/tom-tuna.jpg" 
+                             alt="TOM Cat Wet Food Tuna flavor - Makanan kucing basah ikan tuna segar"
+                             onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🐠</div>
+                        <p>🐠 Classic Tuna</p>
+                        <small style="color: #868e96;">Instantly boosts appetite</small>
+                    </div>
+                    
+                    <div class="image-item">
+                        <!-- 真实图片路径 - 请上传文件到 assets/images/tom-salmon.jpg -->
+                        <img src="assets/images/tom-salmon.jpg" 
+                             alt="TOM Cat Wet Food Salmon flavor - Kaya Omega-3 untuk bulu berkilat"
+                             onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="image-placeholder" style="display: none;">🐟</div>
+                        <p>🐟 Premium Salmon</p>
+                        <small style="color: #868e96;">Rich in Omega-3</small>
+                    </div>
+                </div>
+                <p style="color: #adb5bd; font-size: 0.9rem; margin-top: 20px;">
+                    📸 Product photos coming soon — emoji placeholders shown for now
+                </p>
+            </div>
+            
             <!-- 口味与喂养指南 -->
             <div class="flavors">
                 <h2 style="text-align: center; color: #343a40; margin-bottom: 20px;">3 Irresistible Flavors for Every Feline</h2>
@@ -403,15 +502,18 @@
                 
                 <div class="flavor-container">
                     <div class="flavor-item">
-                        <h4>🐔 Tender Chicken</h4>
+                        <div class="flavor-emoji">🐔</div>
+                        <h4>Tender Chicken</h4>
                         <p>High protein, low fat, easy to digest. Perfect for sensitive stomachs.</p>
                     </div>
                     <div class="flavor-item">
-                        <h4>🐠 Classic Tuna</h4>
+                        <div class="flavor-emoji">🐠</div>
+                        <h4>Classic Tuna</h4>
                         <p>The ultimate seafood delight that instantly boosts appetite.</p>
                     </div>
                     <div class="flavor-item">
-                        <h4>🐟 Premium Salmon</h4>
+                        <div class="flavor-emoji">🐟</div>
+                        <h4>Premium Salmon</h4>
                         <p>Rich in Omega-3 for shiny coat and healthy skin.</p>
                     </div>
                 </div>
@@ -450,10 +552,16 @@
                 </div>
             </div>
             
-            <!-- CTA按钮 -->
+            <!-- CTA按钮 - 修正为真实WhatsApp链接（请替换号码） -->
             <div style="text-align: center;">
-                <a href="#" class="cta-button">🐱 Chat with Us to Order Now</a>
+                <a href="https://wa.me/60123456789?text=I'm%20interested%20in%20TOM%20Cat%20Wet%20Food%20from%20Petflowy" 
+                   class="cta-button" 
+                   target="_blank" 
+                   rel="noopener">
+                   🐱 Chat with Us to Order Now
+                </a>
                 <p style="color: #868e96; margin-top: 10px;">Fast reply • WhatsApp order • Ready stock</p>
+                <p style="color: #adb5bd; font-size: 0.9rem;">📞 Please replace +60123456789 with your actual WhatsApp number</p>
             </div>
             
             <!-- FAQ区域（带有结构化数据） -->
@@ -491,6 +599,7 @@
                     Target Location: Malaysia (Selangor, KL, Penang, Johor)
                     Last Updated: March 2026
                     Page Type: Product Landing Page
+                    GitHub URL: https://hahahaha8888.github.io/petflowy/tom-cat-wet-food.html
                 -->
             </div>
         </div>
